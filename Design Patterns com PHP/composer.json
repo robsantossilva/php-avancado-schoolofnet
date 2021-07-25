@@ -1,0 +1,13 @@
+{
+    "name": "robson/php-avancado",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "authors": [
+        {
+            "name": "Robson Silva",
+            "email": "robsantossilva@gmail.com"
+        }
+    ],
+    "require": {}
+}
