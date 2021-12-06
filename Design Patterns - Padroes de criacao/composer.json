@@ -1,0 +1,15 @@
+{
+    "name": "son/patterns2",
+    "autoload": {
+        "psr-4": {
+            "SON\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robson Silva",
+            "email": "robsantossilva@gmail.com"
+        }
+    ],
+    "require": {}
+}
