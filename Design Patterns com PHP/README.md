@@ -72,9 +72,10 @@ Define uma família ou tipo de classe de forma a reforçar, principalmente, os p
 Uma única interface e uma ou mais classes concretas definem este padrão de projeto.
 
 #### Builder
-Director Concreto: Constrói o resultado
-Builder Concreto: Define os passos para o director
 Interface Director: Define o Director
 Interface Builder: Define o Builder
+Director Concreto: Constrói o resultado
+Builder Concreto: Define os passos para o director
+
 
 #### Vamos por a mão na massa?

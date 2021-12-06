@@ -1,0 +1,15 @@
+{
+    "name": "son/design-patterns",
+    "authors": [
+        {
+            "name": "Robson Silva",
+            "email": "robsantossilva@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "SON\\": "src"
+        }
+    }
+}
