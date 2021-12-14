@@ -56,3 +56,28 @@ Problema: Permite a um objeto alterar seu comportamento quando o seu estado inte
 - Quando o comportamento de um objeto depende do seu estado e ele pode mudar seu comportamento em tempo de execução, dependendo desse estado;
 - Quando operações têm comandos condicionais grandes, de várias alternativas, que dependem do estado do objeto. Esse estado é normalmente representado por uma ou mais constantes enumeradas. Frequentemente, várias operações conterão essa mesma estrutura condicional. O padrão State coloca cada ramo do comando adicional em uma classe separada. Isto lhe permite tratar o estado do objeto como um objeto propriamente dito, que pode variar independentemente de outros objetos.
   
+
+#### Strategy
+Definir uma família de algoritmos, encapsular cada uma delas e torná-las intercambiáveis.
+Strategy permite que o algoritmo varie independentemente dos clientes que o utilizam.
+##### Aplicabilidade
+- Quando muitas classes relacionadas diferem somente no seu comportamento. As estratégias fornecem uma maneira de configurar uma classe com um dentre muitos comportamentos;
+- Quando você necessita de variantes de um algoritmo. Por exemplo, pode defiir algoritmos que refletem diferentes soluções de compromisso entre espaço/tempo. As estratégias podem ser usadas quando essas variantes são implementadas como uma hierarquia de classes de algoritmos
+- Quando um algoritmo usa dados dos quais os cleintes não deveriam ter conhecimento. Use o padrão Strategy para evitar a exposição das estruturas de dados complexas, específicas do algoritmo;
+- Quando uma classe define muitos comportamentos, e estes aparecem em suas operações como múltiplos comandos condicionais da linguagem. Emvez de usar muitos comandos condicionais, mova os ramos condicionais relacionados para a sua própria classe Strategy.
+
+
+#### Template Method
+Problema: Definir o esqueleto de um algoritmo em uma operação, postergando alguns passos para as subclasses. Templates Method permite que subclasses redefinam certos passos de um algoritmo sem mudar a estrutura do mesmo.
+##### Aplicabilidade
+- Para implementar as partes invariantes de um algoritmo uma só vez e deixar para as subclasses a implementação do comportamento que pode variar.
+- Quando o comportamento comum entre subclasses deve ser fatorado e concentrado numa classe comum para evitar a duplicação de código. Este é um bom exemplo de "refatorar para generalizar", conforme descrito por Opdyke e Johnson. Primeiramente, você identifica as diferenças no código existente e então separa as diferenças em novas operações. Por fim, você substitui o código que apresentava as diferenças por um método-template que chama uma dessas novas operações.
+- Para controlar extensões de subclasses. Você pode definir um método-template que chama operações "gancho" em pontos especificos, desta forma permitindo extensões somente desses pontos.
+
+
+#### Visitor
+Problema: Representar uma operação a ser executada nos elementos de uma estrutura de objetos. Visitor permite definir uma nova operação sem mudar as classes dos elementos sobre os quais opera.
+##### Aplcabilidade
+- Quando uma estrutura de objetos contém muitas cllasses de objetos com interface que diferem e você deseja executar operações sobre esses objetos que depedem das suas classes concretas;
+- Quando muitas operações distintas e não-relacionais necessitam ser executadas sobre objetos de uma estrutura de objetos, e você deseja evitar "a poluição" das suas classes com essas operações. Visitor lhe permite manter juntas operações relacionadas, definindo-as em uma única classe. Quando a estrutura do objeto for compartilhada por muitas aplicações, use Visitor para por operações somente naquelas aplicações que as necessitam;
+- Quando as classes que definem a estrutura do objeto raramente mudam, porém, você frequentemente deseja definir novas operações sobre a estrutura. A mudança das classes da estrutura do objeto requer a redefinição da interface para todos os visitantes, o que é potencialmente oneroso. Se as classes da estrutura do objeto mudam com frequencia, provavelmente é melhor denifir as operações nessas classes.
