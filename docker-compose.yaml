@@ -2,9 +2,9 @@ version: '3'
 
 services:
 
-    solid-php-app:
+    php-app:
         build: .
-        container_name: solid-php-app
+        container_name: php-app
         #entrypoint: dockerize -wait tcp://db:3306 -timeout 40s ./.docker/entrypoint.sh
         ports: 
             - "3000:3000"
@@ -13,9 +13,9 @@ services:
         networks:
             - app-network
 
-    solid-php-db:
+    php-db:
         build: ./.docker/mysql
-        container_name: solid-php-db
+        container_name: php-db
         #restart: always
         tty: true
         ports:
