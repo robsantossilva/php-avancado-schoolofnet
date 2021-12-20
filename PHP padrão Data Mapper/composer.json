@@ -1,0 +1,18 @@
+{
+    "name": "robsantossilva/data-mapper-orm",
+    "description": "A Data Mapper ORM",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Robsantossilva\\DataMapperOrm\\": "src/",
+            "App\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robson Silva",
+            "email": "robsantossilva@gmail.com"
+        }
+    ],
+    "require": {}
+}
