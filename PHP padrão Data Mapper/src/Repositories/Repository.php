@@ -42,14 +42,14 @@ class Repository
         }
     }
 
-    // public function insert(EntityInterface $entity): EntityInterface
-    // {
-    //     $table = $entity->getTable();
-    //     $this->driver->setQueryBuilder(new Insert($table, $entity->getAll()));
-    //     $this->driver->execute();
+    public function insert(EntityInterface $entity): EntityInterface
+    {
+        $table = $entity->getTable();
+        $this->driver->setQueryBuilder(new Insert($table, $entity->getAll()));
+        $this->driver->execute();
 
-    //     return $this->first($this->driver->lastInsertedId());
-    // }
+        return $this->first($this->driver->lastInsertedId());
+    }
 
     // public function update(EntityInterface $entity): EntityInterface
     // {

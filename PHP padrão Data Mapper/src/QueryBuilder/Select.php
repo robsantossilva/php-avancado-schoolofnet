@@ -24,8 +24,6 @@ class Select implements QueryBuilderInterface
             $sql .= $this->makeWhere($conditions);
         }
 
-        var_dump($sql);
-
         return $sql;
     }
 
