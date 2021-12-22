@@ -18,10 +18,6 @@ $conn->connect([
 $repository = new Repository($conn);
 $repository->setEntity(Users::class);
 
-$newUser = new Users([
-    'name' => 'Robson Silva',
-    'email' => 'robson@gmail.com',
-    'password' => '123456'
-]);
-$user = $repository->insert($newUser);
+$newSelect = $repository->first(4);
+$user = $repository->delete($newSelect);
 var_dump($user);

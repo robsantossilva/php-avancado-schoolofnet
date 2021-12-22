@@ -10,8 +10,6 @@ trait Where
         $where = [];
         $values = [];
 
-        var_dump($conditions);
-
         foreach ($conditions as $condition) {
             $field = $condition[0];
             $value = $condition[1];
