@@ -51,18 +51,18 @@ class Repository
         return $this->first($this->driver->lastInsertedId());
     }
 
-    // public function update(EntityInterface $entity): EntityInterface
-    // {
-    //     $table = $entity->getTable();
-    //     $condition = [
-    //         ['id', $entity->id]
-    //     ];
+    public function update(EntityInterface $entity): EntityInterface
+    {
+        $table = $entity->getTable();
+        $condition = [
+            ['id', $entity->id]
+        ];
 
-    //     $this->driver->setQueryBuilder(new Update($table, $entity->getAll(), $condition));
-    //     $this->driver->execute();
+        $this->driver->setQueryBuilder(new Update($table, $entity->getAll(), $condition));
+        $this->driver->execute();
 
-    //     return $entity;
-    // }
+        return $entity;
+    }
 
     public function delete(EntityInterface $entity): EntityInterface
     {
