@@ -1,3 +1,4 @@
 /Design Patterns com PHP/vendor
 /SOLID com PHP/vendor
-.docker/dbdata
+/**/vendor
+/.docker/dbdata
