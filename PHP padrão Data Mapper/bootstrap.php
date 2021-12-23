@@ -18,8 +18,9 @@ $conn->connect([
 $repository = new Repository($conn);
 $repository->setEntity(Users::class);
 
-$user = $repository->first(2);
-//$user->name = 'Robson Silva';
+$newSelect = $repository->first(2);
 
-// $user = $repository->update($user);
+$newSelect->name = "Hugo Samuel";
+
+$user = $repository->update($newSelect);
 var_dump($user);
